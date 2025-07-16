@@ -26,6 +26,7 @@ export default function Home() {
           </button>
         </div>
       </div>
+      <ProjectSection />
     </div>
   );
 }
