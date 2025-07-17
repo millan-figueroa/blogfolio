@@ -1,5 +1,20 @@
 import ProjectSection from "./components/ProjectSection";
 
+// TO DO:
+// XProject Setup
+// _Hero Section
+// _Theme/Colors
+// _Projects Section
+// _CMS Setup
+// _Blog Section
+// _Blog Page
+// _Header
+// _About Me
+// _Animations
+// _Footer
+// _Mobile Responsiveness
+// _Deployment
+
 export default function Home() {
   return (
     <div className="container mx-auto p-8 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)]">
