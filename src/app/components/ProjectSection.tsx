@@ -50,9 +50,18 @@ const ProjectSection = () => {
   return (
     <section id="projects" className="px-4 py-32 sm:px-6 lg:px-8">
       <h2 className="text-3xl font-bold text-white mb-12 text-center">
-        {" "}
-        Featured Projects{" "}
+        Featured Projects
       </h2>
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+        {projects.map((project, index) => (
+          <div
+            key={index}
+            className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-6 border border-gray-700/50 hover:border-primary-500/50 transition-colors hover:shadow-sm text-left"
+          >
+            {project.title}
+          </div>
+        ))}
+      </div>
     </section>
   );
 };
