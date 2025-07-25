@@ -45,6 +45,44 @@ const ProjectSection = () => {
         "Stripe API",
       ],
     },
+    {
+      id: 4,
+      title: "Tenzies Game",
+      tags: ["TS", "Postgres", "DrizzleORM"],
+      description:
+        "A fun dice game where players try to roll all dice to the same number.",
+      fullDescription:
+        "This project is a simple dice game built with TypeScript and Postgres. Players roll dice and try to get all dice to show the same number. The game logic is implemented in NodeJS, and the front-end uses TailwindCSS for styling.",
+      image: "/feedback.png",
+      techStack: [
+        "TypeScript",
+        "Postgres",
+        "DrizzleORM",
+        "TailwindCSS",
+        "NodeJS",
+        "Stripe API",
+      ],
+    },
+    {
+      id: 5,
+      title: "Portfolio Website",
+      tags: ["NextJS", "React", "TailwindCSS"],
+      description: "A personal portfolio website to showcase projects.",
+      fullDescription:
+        "This project is built with NextJS and React, using TailwindCSS for styling. It includes sections for projects, blog posts, and contact information.",
+      image: "/portfolio.png",
+      techStack: ["NextJS", "React", "TailwindCSS", "NodeJS"],
+    },
+    {
+      id: 6,
+      title: "Recipe App",
+      tags: ["NextJS", "React", "TailwindCSS"],
+      description: "A web application to search and save recipes.",
+      fullDescription:
+        "This project allows users to search for recipes, save their favorites, and share them with others. Built with NextJS and React, it uses TailwindCSS for styling.",
+      image: "/portfolio.png",
+      techStack: ["NextJS", "React", "TailwindCSS", "NodeJS"],
+    },
   ];
 
   return (
@@ -54,11 +92,22 @@ const ProjectSection = () => {
       </h2>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
         {projects.map((project, index) => (
+          // Project card component
           <div
             key={index}
-            className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-6 border border-gray-700/50 hover:border-primary-500/50 transition-colors hover:shadow-sm text-left"
+            className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-6 border border-gray-700/50 hover:border-white transition-colors hover:shadow-sm text-left"
           >
-            {project.title}
+            <h3>{project.title}</h3>
+            <div className="flex flex-wrap gap-1 mt-auto">
+              {project.tags.map((tag, index) => (
+                <span
+                  key={index}
+                  className="px-2 py-0.5 text-xs rounded-full bg-primary-500/20 text-primary-200 border border-primary-500/30 "
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
           </div>
         ))}
       </div>
