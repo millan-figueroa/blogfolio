@@ -97,12 +97,12 @@ const ProjectSection = () => {
             key={index}
             className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-6 border border-gray-700/50 hover:border-white transition-colors hover:shadow-sm text-left"
           >
-            <h3>{project.title}</h3>
+            <h3 className="py-3">{project.title}</h3>
             <div className="flex flex-wrap gap-1 mt-auto">
               {project.tags.map((tag, index) => (
                 <span
                   key={index}
-                  className="px-2 py-0.5 text-xs rounded-full bg-primary-500/20 text-primary-200 border border-primary-500/30 "
+                  className="px-2 py-0.5 text-xs rounded-full bg-[var(--primary-dark)] text-[var(--primary-light)] border border-[var(--primary)] "
                 >
                   {tag}
                 </span>
